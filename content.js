@@ -19,6 +19,5 @@ function highlightElements(highlightType) {
 }
 
 chrome.runtime.onMessage.addListener(function(request) {
-  console.log("request:", request);
   highlightElements(request);
 });
