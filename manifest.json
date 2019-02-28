@@ -4,12 +4,20 @@
   "manifest_version": 2,
   "content_scripts": [
     {
-      "matches": ["https://github.com/notifications"],
-      "js": ["content.js"]
+      "matches": [
+        "https://github.com/notifications"
+      ],
+      "js": [
+        "content.js"
+      ]
     }
   ],
   "browser_action": {
     "default_popup": "popup.html",
     "default_title": "Github Notification Highlighter"
+  },
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon48.png"
   }
 }
