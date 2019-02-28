@@ -1,39 +1,39 @@
-const classNames = {
+const labels = {
   issue: {
-    open: "octicon octicon-issue-opened",
-    closed: "octicon octicon-issue-closed"
+    open: "Open issue",
+    closed: "Closed issue"
   },
   pr: {
-    open: "octicon octicon-git-pull-request",
-    merged: "octicon octicon-git-merge",
-    closed: "octicon octicon-git-pull-request"
+    open: "Open pull request",
+    merged: "Merged pull request",
+    closed: "Closed pull request"
   }
 };
 
   const buttonClicks = [
     {
       id: "all",
-      classNames: "octicon",
+      label: null,
     },
     {
       id: "openIssues",
-      classNames: classNames.issue.open
+      label: labels.issue.open
     },
     {
       id: "closedIssues",
-      classNames: classNames.issue.closed
+      label: labels.issue.closed
     },
     {
       id: "openPRs",
-      classNames: classNames.pr.open
+      label: labels.pr.open
     },
     {
       id: "closedPRs",
-      classNames: classNames.pr.closed
+      label: labels.pr.closed
     },
     {
       id: "mergedPRs",
-      classNames: classNames.pr.merged
+      label: labels.pr.merged
     }
   ];
 
@@ -52,7 +52,7 @@ document.addEventListener(
       document
         .getElementById(button.id)
         .addEventListener("click", function() {
-          overrideThingy(button.classNames);
+          overrideThingy(button.label);
         });
     })
   },
