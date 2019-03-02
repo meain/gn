@@ -1,11 +1,11 @@
 {
   "name": "Github Notification Highlighter",
-  "version": "0.0.0.1",
+  "version": "1.2",
   "manifest_version": 2,
   "content_scripts": [
     {
       "matches": [
-        "https://github.com/notifications"
+        "https://github.com/*/notifications"
       ],
       "js": [
         "content.js"
